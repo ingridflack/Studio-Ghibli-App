@@ -1,7 +1,8 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import Favorites from "../../views/Favorites";
 
-const Favorites: NextPage = () => {
+const FavoritesPage: NextPage = () => {
   return (
     <>
       <Head>
@@ -10,9 +11,11 @@ const Favorites: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>Pagina de favoritos</main>
+      <main>
+        <Favorites />
+      </main>
     </>
   );
 };
 
-export default Favorites;
+export default FavoritesPage;

@@ -1,7 +1,8 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import Movie from "../../views/Movie";
 
-const Movies: NextPage = () => {
+const MoviesPage: NextPage = () => {
   return (
     <>
       <Head>
@@ -10,9 +11,11 @@ const Movies: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>Pagina de detalhes</main>
+      <main>
+        <Movie />
+      </main>
     </>
   );
 };
 
-export default Movies;
+export default MoviesPage;

@@ -1,7 +1,8 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import Home from "../views/Home";
 
-const Home: NextPage = () => {
+const HomePage: NextPage = () => {
   return (
     <>
       <Head>
@@ -10,9 +11,11 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>Pagina de listagem</main>
+      <main>
+        <Home />
+      </main>
     </>
   );
 };
 
-export default Home;
+export default HomePage;
