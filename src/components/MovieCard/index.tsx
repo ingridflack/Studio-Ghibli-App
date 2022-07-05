@@ -1,9 +1,11 @@
+import { MouseEvent } from "react";
+
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
+import { useFavorite } from "../../hooks/useFavorite";
 
 import { Movie } from "../../types";
 
 import * as S from "./styles";
-
 interface MovieCardProps {
   movie: Movie;
 }
@@ -17,7 +19,16 @@ const MovieCard = ({ movie }: MovieCardProps) => {
     movie_banner = "/assets/placeholder-image.png",
   } = movie;
 
-  console.log(movie);
+  const { checkFavorite, toggleFavorite } = useFavorite();
+
+  const isFavorite = checkFavorite(movie);
+
+  const handleFavorite = (e: MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+
+    toggleFavorite(movie);
+  };
+
   return (
     <S.Container>
       <S.Image src={movie_banner} alt={`Banner do filme ${title}`} />
@@ -25,8 +36,8 @@ const MovieCard = ({ movie }: MovieCardProps) => {
       <S.TextContainer>
         <S.Title>
           {title}
-          <S.FavoriteBtn>
-            <AiOutlineHeart />
+          <S.FavoriteBtn type="button" onClick={handleFavorite}>
+            {isFavorite ? <AiFillHeart /> : <AiOutlineHeart />}
           </S.FavoriteBtn>
         </S.Title>
 

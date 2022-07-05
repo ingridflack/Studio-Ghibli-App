@@ -7,7 +7,6 @@ interface HomeProps {
 }
 
 const Home = ({ movies }: HomeProps) => {
-  console.log(movies);
   return (
     <S.MoviesList>
       {movies.map((movie) => (
