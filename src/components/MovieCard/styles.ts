@@ -13,24 +13,46 @@ export const Image = styled.img`
 `;
 
 export const TextContainer = styled.div`
-  padding: 1rem;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
 `;
 
 export const Title = styled.span`
   ${({ theme }) => css`
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
     font-size: ${theme.fontSize.large};
     font-weight: 600;
+  `}
+`;
+
+export const FavoriteBtn = styled.button`
+  ${({ theme }) => css`
+    border: none;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+
+    svg {
+      font-size: 1.2rem;
+      color: ${theme.colors.primary};
+    }
   `}
 `;
 
 export const Director = styled.span`
   ${({ theme }) => css`
     font-size: ${theme.fontSize.medium};
-    color: ${theme.colors.gray.silver};
-    margin: 0.25rem 0;
+    color: ${theme.colors.gray.dark};
+    margin: 0.5rem 0;
   `}
 `;
 
-export const Description = styled.p``;
+export const Description = styled.p`
+  ${({ theme }) => css`
+    font-size: ${theme.fontSize.medium};
+    line-height: 1.5;
+  `}
+`;

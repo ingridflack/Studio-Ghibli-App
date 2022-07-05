@@ -1,6 +1,7 @@
 import axios from "axios";
-import type { NextPage } from "next";
+
 import Head from "next/head";
+
 import { getMovies } from "../services";
 import { Movie } from "../types";
 import Home from "../views/Home";
@@ -28,8 +29,6 @@ const HomePage = ({ movies }: HomePageProps) => {
 export async function getStaticProps() {
   try {
     const { data: movies } = await getMovies();
-
-    console.log(movies, movies.length);
 
     return {
       props: { movies },
