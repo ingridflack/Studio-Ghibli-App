@@ -22,7 +22,6 @@ export const GlobalStyle = createGlobalStyle`
 
 body {
   background: ${({ theme }) => theme.colors.background};
-  color: ${({ theme }) => theme.colors.gray.platinum};
 }
 
 body,

@@ -1,8 +1,15 @@
+import axios from "axios";
 import type { NextPage } from "next";
 import Head from "next/head";
+import { getMovies } from "../services";
+import { Movie } from "../types";
 import Home from "../views/Home";
 
-const HomePage: NextPage = () => {
+interface HomePageProps {
+  movies: Movie[];
+}
+
+const HomePage = ({ movies }: HomePageProps) => {
   return (
     <>
       <Head>
@@ -12,10 +19,33 @@ const HomePage: NextPage = () => {
       </Head>
 
       <main>
-        <Home />
+        <Home movies={movies} />
       </main>
     </>
   );
 };
+
+export async function getStaticProps() {
+  try {
+    const { data: movies } = await getMovies();
+
+    console.log(movies, movies.length);
+
+    return {
+      props: { movies },
+    };
+  } catch (e) {
+    console.error(e);
+    if (axios.isAxiosError(e) && e?.response?.status === 404) {
+      return {
+        props: { notFound: true },
+      };
+    }
+
+    return {
+      props: { error: e },
+    };
+  }
+}
 
 export default HomePage;
