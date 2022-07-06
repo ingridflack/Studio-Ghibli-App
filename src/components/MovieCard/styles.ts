@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 
 export const Container = styled.a`
   width: 100%;
@@ -25,11 +25,12 @@ export const TextContainer = styled.div`
 
 export const Title = styled.span`
   ${({ theme }) => css`
-    align-items: center;
+    align-items: flex-start;
     display: flex;
     justify-content: space-between;
     font-size: ${theme.fontSize.large};
     font-weight: 600;
+    line-height: 1.75rem;
   `}
 `;
 
@@ -44,13 +45,20 @@ export const OriginalTitle = styled.span`
 export const FavoriteBtn = styled.button`
   ${({ theme }) => css`
     border: none;
-    padding: 0.5rem;
+    padding: 0.25rem;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
+    height: 1.75rem;
+    color: ${theme.colors.primary};
+    transition: color 300ms ease;
+
+    &:hover {
+      color: ${theme.colors.secondary};
+    }
 
     svg {
       font-size: 1.2rem;
-      color: ${theme.colors.primary};
     }
   `}
 `;

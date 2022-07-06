@@ -17,9 +17,6 @@ interface MoviesPageProps {
 }
 
 const MovieView = ({ movie, people }: MoviesPageProps) => {
-  const { title, description, director, producer, release_date, rt_score } =
-    movie;
-
   const { checkFavorite, toggleFavorite } = useFavorite();
 
   const isFavorite = checkFavorite(movie);
@@ -29,6 +26,11 @@ const MovieView = ({ movie, people }: MoviesPageProps) => {
 
     toggleFavorite(movie);
   };
+
+  if (!movie) return null;
+
+  const { title, description, director, producer, release_date, rt_score } =
+    movie;
 
   return (
     <MainContainer>

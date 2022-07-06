@@ -30,17 +30,17 @@ const Home = ({ movies }: HomeProps) => {
   );
 
   return (
-    <MainContainer>
+    <>
       <Header />
 
-      <form>
+      <S.Form>
         <S.Input
           placeholder="Search"
           value={searchValue}
           onChange={handleSearch}
         />
         <AiOutlineSearch />
-      </form>
+      </S.Form>
 
       <S.MoviesList>
         {filteredMovies.map((movie) => (
@@ -49,7 +49,7 @@ const Home = ({ movies }: HomeProps) => {
 
         {!filteredMovies.length && <Alert>No results found</Alert>}
       </S.MoviesList>
-    </MainContainer>
+    </>
   );
 };
 

@@ -21,8 +21,6 @@ const MovieCard = ({ movie }: MovieCardProps) => {
     movie_banner = "/assets/placeholder-image.png",
   } = movie;
 
-  console.log({ movie });
-
   const { checkFavorite, toggleFavorite } = useFavorite();
 
   const isFavorite = checkFavorite(movie);

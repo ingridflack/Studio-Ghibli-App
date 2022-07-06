@@ -6,7 +6,13 @@ export const Header = styled.div`
   `}
 `;
 
-export const Title = styled.h1``;
+export const Title = styled.h2`
+  ${({ theme }) => css`
+    color: ${theme.colors.gray.white};
+    font-weight: 400;
+    font-size: 1.4rem;
+  `}
+`;
 
 export const ButtonsContainer = styled.div`
   display: flex;
@@ -127,7 +133,7 @@ export const ProducerInfo = styled.div`
 export const Cast = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0.5rem;
+  gap: 1rem;
 
   @media screen and (max-width: 576px) {
     grid-template-columns: 1fr;
@@ -164,5 +170,5 @@ export const PersonInfo = styled.div`
 export const PersonImage = styled.img`
   background-color: white;
   border-radius: 50%;
-  width: 5rem;
+  width: 4rem;
 `;

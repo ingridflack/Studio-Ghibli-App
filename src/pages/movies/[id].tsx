@@ -1,4 +1,3 @@
-import type { NextPage } from "next";
 import Head from "next/head";
 import { getMovie, getMovies, getPersonByURL } from "../../services";
 import { IMovie, IPerson } from "../../types";
@@ -10,8 +9,6 @@ interface MoviesPageProps {
 }
 
 const MoviesPage = ({ movie, people }: MoviesPageProps) => {
-  console.log({ movie, people });
-
   return (
     <>
       <Head>
@@ -47,6 +44,8 @@ export async function getStaticProps({ params }: any) {
     const people = (await Promise.all(peoplePromises)).flatMap(
       ({ data }) => data
     );
+
+    console.log({ movieId });
 
     return {
       props: {

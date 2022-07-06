@@ -4,6 +4,7 @@ export const MoviesList = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+  margin-top: 2rem;
 
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr 1fr;
@@ -31,7 +32,7 @@ export const Input = styled.input`
 
 export const Form = styled.form`
   ${({ theme }) => css`
-    grid-area: form;
+    margin-bottom: 1.5rem;
     position: relative;
 
     svg {
