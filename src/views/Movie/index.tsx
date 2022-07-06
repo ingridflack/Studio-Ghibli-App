@@ -9,6 +9,7 @@ import { BsHeart, BsHeartFill } from "react-icons/bs";
 
 import * as S from "./styles";
 import { useFavorite } from "../../hooks/useFavorite";
+import Link from "next/link";
 
 interface MoviesPageProps {
   movie: IMovie;
@@ -18,8 +19,6 @@ interface MoviesPageProps {
 const MovieView = ({ movie, people }: MoviesPageProps) => {
   const { title, description, director, producer, release_date, rt_score } =
     movie;
-
-  console.log(movie, title);
 
   const { checkFavorite, toggleFavorite } = useFavorite();
 
@@ -34,9 +33,11 @@ const MovieView = ({ movie, people }: MoviesPageProps) => {
   return (
     <MainContainer>
       <S.Header>
-        <S.BackButton>
-          <AiOutlineArrowLeft />
-        </S.BackButton>
+        <Link href="/">
+          <S.BackButton>
+            <AiOutlineArrowLeft />
+          </S.BackButton>
+        </Link>
 
         <S.Title>{title}</S.Title>
 
