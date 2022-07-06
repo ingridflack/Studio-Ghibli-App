@@ -1,4 +1,5 @@
 import Alert from "../../components/Alert";
+import Header from "../../components/Header";
 import MovieCard from "../../components/MovieCard";
 import { useFavorite } from "../../hooks/useFavorite";
 import { MainContainer } from "../../styles/shared";
@@ -9,6 +10,8 @@ const Favorites = () => {
   const { favorites, toggleFavorite } = useFavorite();
   return (
     <MainContainer>
+      <Header />
+
       <h1>Meus filmes favoritos</h1>
 
       <MoviesList>

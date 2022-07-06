@@ -3,13 +3,13 @@ import { MouseEvent } from "react";
 import { MainContainer } from "../../styles/shared";
 import { IMovie, IPerson } from "../../types";
 
-import { AiOutlineArrowLeft } from "react-icons/ai";
 import { SiRottentomatoes } from "react-icons/si";
 import { BsHeart, BsHeartFill } from "react-icons/bs";
 
 import * as S from "./styles";
 import { useFavorite } from "../../hooks/useFavorite";
-import Link from "next/link";
+
+import Header from "../../components/Header";
 
 interface MoviesPageProps {
   movie: IMovie;
@@ -32,13 +32,9 @@ const MovieView = ({ movie, people }: MoviesPageProps) => {
 
   return (
     <MainContainer>
-      <S.Header>
-        <Link href="/">
-          <S.BackButton>
-            <AiOutlineArrowLeft />
-          </S.BackButton>
-        </Link>
+      <Header />
 
+      <S.Header>
         <S.Title>{title}</S.Title>
 
         <S.ButtonsContainer>
