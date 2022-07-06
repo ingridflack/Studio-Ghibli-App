@@ -36,7 +36,7 @@ const MovieCard = ({ movie }: MovieCardProps) => {
   return (
     <Link href={`/movies/${id}`} passHref>
       <S.Container>
-        <S.Image src={movie_banner} alt={`Banner do filme ${title}`} />
+        <S.Image src={movie_banner} alt={`${title} movie banner`} />
 
         <S.TextContainer>
           <S.Title>
@@ -51,7 +51,7 @@ const MovieCard = ({ movie }: MovieCardProps) => {
 
           {!!director && (
             <S.Director>
-              <strong>Diretor:</strong> {director}
+              <strong>Director:</strong> {director}
             </S.Director>
           )}
 

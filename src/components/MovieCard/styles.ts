@@ -1,11 +1,16 @@
 import styled, { css } from "styled-components";
 
-export const Container = styled.div`
-  max-width: 300px;
+export const Container = styled.a`
   width: 100%;
   border-radius: 1rem;
   background-color: ${({ theme }) => theme.colors.gray.white};
   overflow: hidden;
+  transition: transform 200ms ease-in-out;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+  }
 `;
 
 export const Image = styled.img`

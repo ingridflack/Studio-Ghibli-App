@@ -6,21 +6,6 @@ export const Header = styled.div`
   `}
 `;
 
-export const BackButton = styled.button`
-  ${({ theme }) => css`
-    color: ${theme.colors.gray.white};
-    font-size: 20px;
-    align-items: center;
-    display: flex;
-    transition: color 300ms ease;
-    margin-bottom: 0.5rem;
-
-    &:hover {
-      color: ${theme.colors.gray.lightGray};
-    }
-  `}
-`;
-
 export const Title = styled.h1``;
 
 export const ButtonsContainer = styled.div`
