@@ -1,9 +1,9 @@
 import MovieCard from "../../components/MovieCard";
-import { Movie } from "../../types";
+import { IMovie } from "../../types";
 
 import * as S from "./styles";
 interface HomeProps {
-  movies: Movie[];
+  movies: IMovie[];
 }
 
 const Home = ({ movies }: HomeProps) => {
