@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MouseEvent } from "react";
+import { MouseEvent, useState } from "react";
 
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import { useFavorite } from "../../hooks/useFavorite";
@@ -11,6 +11,8 @@ interface MovieCardProps {
   movie: IMovie;
 }
 
+const MAX_DESCRIPTION_LENGTH = 125;
+
 const MovieCard = ({ movie }: MovieCardProps) => {
   const {
     id,
@@ -21,6 +23,8 @@ const MovieCard = ({ movie }: MovieCardProps) => {
     movie_banner = "/assets/placeholder-image.png",
   } = movie;
 
+  const shouldShowMoreButton = description.length > MAX_DESCRIPTION_LENGTH;
+  const [showDescription, setShowDescription] = useState(false);
   const { checkFavorite, toggleFavorite } = useFavorite();
 
   const isFavorite = checkFavorite(movie);
@@ -29,6 +33,32 @@ const MovieCard = ({ movie }: MovieCardProps) => {
     e.preventDefault();
 
     toggleFavorite(movie);
+  };
+
+  const handleShowDescription = (e: any) => {
+    e.preventDefault();
+    e.stopPropagation();
+
+    setShowDescription((prev) => !prev);
+  };
+
+  const renderDescription = () => {
+    if (!shouldShowMoreButton) return description;
+
+    return (
+      <>
+        {showDescription
+          ? description
+          : `${description.slice(0, MAX_DESCRIPTION_LENGTH)}...`}
+
+        <S.ToggleDescriptionButton
+          type="button"
+          onClick={handleShowDescription}
+        >
+          {showDescription ? "- read less" : "+ read more"}
+        </S.ToggleDescriptionButton>
+      </>
+    );
   };
 
   return (
@@ -53,7 +83,7 @@ const MovieCard = ({ movie }: MovieCardProps) => {
             </S.Director>
           )}
 
-          <S.Description>{description}</S.Description>
+          <S.Description>{renderDescription()}</S.Description>
         </S.TextContainer>
       </S.Container>
     </Link>

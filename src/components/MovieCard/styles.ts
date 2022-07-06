@@ -6,6 +6,9 @@ export const Container = styled.a`
   background-color: ${({ theme }) => theme.colors.gray.white};
   overflow: hidden;
   transition: transform 200ms ease-in-out;
+  align-self: start;
+  min-height: 28rem;
+  position: relative;
 
   &:hover,
   &:focus {
@@ -18,7 +21,7 @@ export const Image = styled.img`
 `;
 
 export const TextContainer = styled.div`
-  padding: 1.5rem;
+  padding: 1.5rem 1.5rem 4rem;
   display: flex;
   flex-direction: column;
 `;
@@ -75,9 +78,27 @@ export const Description = styled.p`
   ${({ theme }) => css`
     font-size: ${theme.fontSize.medium};
     line-height: 1.5;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
   `}
+`;
+
+export const ToggleDescriptionButton = styled.button`
+  margin: 0;
+  height: 3rem;
+  background-color: rgba(0, 0, 0, 0.05);
+  border: none;
+  font-size: ${({ theme }) => theme.fontSize.medium};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  padding: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transition: color 300ms ease, background-color 300ms ease;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.gray.white};
+    background-color: ${({ theme }) => theme.colors.gray.silver};
+  }
 `;

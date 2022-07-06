@@ -13,11 +13,18 @@ const Header = () => {
 
   return (
     <S.Container>
-      <S.Logo src="/assets/studio-ghibli-logo.webp" />
+      <Link href="/">
+        <S.Logo
+          src="/assets/studio-ghibli-logo.webp"
+          alt="Studio Ghibli logo"
+          height={72}
+          width={128}
+        />
+      </Link>
 
       <nav>
         {MENU_ITEMS.map(({ href, text }) => (
-          <Link href={href} key={href}>
+          <Link href={href} key={href} passHref>
             <S.NavLink active={router.pathname === href}>{text}</S.NavLink>
           </Link>
         ))}

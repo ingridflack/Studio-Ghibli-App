@@ -84,7 +84,12 @@ const MovieView = ({ movie, people }: MoviesPageProps) => {
         <S.Cast>
           {people.map(({ id, name, age, gender }: IPerson) => (
             <S.Person key={id}>
-              <S.PersonImage src="/assets/user-placeholder.png" />
+              <S.PersonImage
+                src="/assets/user-placeholder.png"
+                alt={`${name}'s photo`}
+                width={64}
+                height={64}
+              />
 
               <S.PersonInfo>
                 <p>{name || "Unknown"}</p>

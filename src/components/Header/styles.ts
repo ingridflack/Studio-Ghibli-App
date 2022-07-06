@@ -1,19 +1,16 @@
 import styled, { css } from "styled-components";
 
 export const Container = styled.div`
-  ${({ theme }) => css`
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 2rem;
-  `}
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
 `;
 
 export const Logo = styled.img`
   width: 8rem;
+  cursor: pointer;
 `;
-
-export const LinksContainer = styled.div``;
 
 const navLinkActiveStyle = ({ colors }: any) => css`
   color: ${colors.gray.lightGray};
