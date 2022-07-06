@@ -28,12 +28,20 @@ export const Title = styled.span`
   `}
 `;
 
+export const OriginalTitle = styled.span`
+  ${({ theme }) => css`
+    color: ${theme.colors.gray.silver};
+    font-size: ${theme.fontSize.small};
+    font-weight: 600;
+  `}
+`;
+
 export const FavoriteBtn = styled.button`
   ${({ theme }) => css`
     border: none;
     padding: 0.5rem;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
 
     svg {
       font-size: 1.2rem;
@@ -54,5 +62,9 @@ export const Description = styled.p`
   ${({ theme }) => css`
     font-size: ${theme.fontSize.medium};
     line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   `}
 `;

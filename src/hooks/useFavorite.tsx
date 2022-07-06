@@ -6,16 +6,16 @@ import {
   useState,
 } from "react";
 import { toast } from "react-toastify";
-import { Movie } from "../types";
+import { IMovie } from "../types";
 
 interface FavoriteProviderProps {
   children: ReactNode;
 }
 
 interface FavoriteContextData {
-  favorites: Movie[];
-  checkFavorite: (movie: Movie) => boolean;
-  toggleFavorite: (movie: Movie) => void;
+  favorites: IMovie[];
+  checkFavorite: (movie: IMovie) => boolean;
+  toggleFavorite: (movie: IMovie) => void;
 }
 
 const FavoriteContext = createContext<FavoriteContextData>(
@@ -27,7 +27,7 @@ const STORAGE_FAVORITE_KEY = "@FavoriteMovies:favorites";
 export function FavoriteProvider({
   children,
 }: FavoriteProviderProps): JSX.Element {
-  const [favorites, setFavorites] = useState<Movie[]>([]);
+  const [favorites, setFavorites] = useState<IMovie[]>([]);
 
   useEffect(() => {
     const storagedFavorites = localStorage.getItem(STORAGE_FAVORITE_KEY);
@@ -41,16 +41,16 @@ export function FavoriteProvider({
     localStorage.setItem(STORAGE_FAVORITE_KEY, JSON.stringify(favorites));
   }, [favorites]);
 
-  const checkFavorite = (movie: Movie): boolean =>
+  const checkFavorite = (movie: IMovie): boolean =>
     favorites.some((item) => item.id === movie.id);
 
-  const addFavorite = (movie: Movie) => {
-    setFavorites((favorites: Movie[]) => [...favorites, movie]);
+  const addFavorite = (movie: IMovie) => {
+    setFavorites((favorites: IMovie[]) => [...favorites, movie]);
 
     toast.success("Adicionado aos favoritos com sucesso.");
   };
 
-  const removeFavorite = (movie: Movie) => {
+  const removeFavorite = (movie: IMovie) => {
     setFavorites((favorites) =>
       favorites.filter((item) => item.id !== movie.id)
     );
@@ -58,7 +58,7 @@ export function FavoriteProvider({
     toast.success("Removido dos favoritos com sucesso.");
   };
 
-  const toggleFavorite = (movie: Movie) => {
+  const toggleFavorite = (movie: IMovie) => {
     if (checkFavorite(movie)) {
       removeFavorite(movie);
     } else {
