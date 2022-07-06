@@ -1,8 +1,17 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import { getMovie, getMovies, getPersonByURL } from "../../services";
+import { IMovie, IPerson } from "../../types";
 import Movie from "../../views/Movie";
 
-const MoviesPage: NextPage = () => {
+interface MoviesPageProps {
+  movie: IMovie;
+  people: IPerson;
+}
+
+const MoviesPage = ({ movie, people }: MoviesPageProps) => {
+  console.log({ movie, people });
+
   return (
     <>
       <Head>
@@ -11,11 +20,43 @@ const MoviesPage: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <Movie />
-      </main>
+      <Movie movie={movie} people={people} />
     </>
   );
 };
+
+export async function getStaticPaths() {
+  const { data: movies } = await getMovies();
+
+  const paths = movies.map(({ id }: IMovie) => ({ params: { id } }));
+
+  return {
+    paths,
+    fallback: true,
+  };
+}
+
+export async function getStaticProps({ params }: any) {
+  const { id: movieId } = params;
+
+  try {
+    const { data: movie } = await getMovie(movieId);
+
+    const peoplePromises = movie.people.map(getPersonByURL);
+
+    const people = (await Promise.all(peoplePromises)).flatMap(
+      ({ data }) => data
+    );
+
+    return {
+      props: {
+        movie,
+        people,
+      },
+    };
+  } catch {
+    return { notFound: true };
+  }
+}
 
 export default MoviesPage;
