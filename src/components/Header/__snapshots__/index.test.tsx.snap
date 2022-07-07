@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should match snapshot 1`] = `
+<div>
+  <div
+    class="sc-c8ddd29-0 iFqajX"
+  >
+    <img
+      alt="Studio Ghibli logo"
+      class="sc-c8ddd29-1 bMwEkK"
+      height="72"
+      src="/assets/studio-ghibli-logo.webp"
+      width="128"
+    />
+    <nav>
+      <a
+        class="sc-c8ddd29-2 fflUWz"
+        href="/"
+      >
+        Home
+      </a>
+      <a
+        class="sc-c8ddd29-2 etVLLE"
+        href="/favorites"
+      >
+        Favorites
+      </a>
+    </nav>
+  </div>
+</div>
+`;
