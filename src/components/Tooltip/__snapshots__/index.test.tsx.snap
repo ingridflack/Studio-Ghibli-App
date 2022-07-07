@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tooltip should match snapshot 1`] = `
+<div>
+  <div
+    class="sc-ade4b8be-1 kbXxyf"
+  >
+    <div
+      class="sc-ade4b8be-0 jUqyaW"
+    >
+      Test
+    </div>
+  </div>
+</div>
+`;
