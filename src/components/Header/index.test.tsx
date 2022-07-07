@@ -7,7 +7,7 @@ const useRouter = jest.spyOn(require("next/router"), "useRouter");
 
 describe("Header", () => {
   it("should match snapshot", () => {
-    useRouter.mockImplementationOnce(() => ({
+    useRouter.mockImplementation(() => ({
       pathname: "/favorites",
     }));
 

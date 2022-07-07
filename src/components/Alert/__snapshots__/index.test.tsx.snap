@@ -4,6 +4,7 @@ exports[`Alert should match snapshot 1`] = `
 <div>
   <div
     class="sc-e310fb4d-0 jFjXpt"
+    data-testid="alert-container"
   >
     <svg
       fill="none"

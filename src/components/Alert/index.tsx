@@ -9,7 +9,7 @@ interface AlertProps {
 
 const Alert = ({ children }: AlertProps) => {
   return (
-    <Container>
+    <Container data-testid="alert-container">
       <FiAlertTriangle />
       {children}
     </Container>
