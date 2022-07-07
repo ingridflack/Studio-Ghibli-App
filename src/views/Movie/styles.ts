@@ -25,12 +25,11 @@ export const RTBox = styled.div`
     align-items: center;
     border: 1px solid ${theme.colors.primary};
     width: max-content;
-    padding: 0.25rem 1rem;
+    padding: 0.5rem;
     border-radius: 0.25rem;
     margin-right: 1rem;
 
     svg {
-      font-size: ${theme.fontSize.large};
       color: ${theme.colors.primary};
       margin-right: 0.5rem;
     }
@@ -41,15 +40,14 @@ export const FavoriteButton = styled.button<{ active: boolean }>`
   align-items: center;
   background-color: transparent;
   border: none;
-  border: 1px solid ${({ theme }) => theme.colors.gray.dark};
+  border: 1px solid ${({ theme }) => theme.colors.gray.white};
   border-radius: 0.25rem;
-  color: ${({ theme }) => theme.colors.gray.lightGray};
+  color: ${({ theme }) => theme.colors.gray.white};
   display: flex;
   padding: 0.5rem;
   transition: color 200ms ease, border-color 200ms ease;
 
   &:hover {
-    color: ${({ theme }) => theme.colors.primary};
     border-color: ${({ theme }) => theme.colors.primary};
   }
 
@@ -61,10 +59,8 @@ export const FavoriteButton = styled.button<{ active: boolean }>`
     return (
       active &&
       css`
-        &,
-        &:hover {
+        svg {
           color: ${({ theme }) => theme.colors.primary};
-          border-color: ${({ theme }) => theme.colors.primary};
         }
       `
     );
@@ -82,7 +78,7 @@ export const InfoTitle = styled.span`
     color: ${theme.colors.gray.silver};
     display: flex;
     font-size: ${theme.fontSize.normal};
-    margin: 1rem 0;
+    margin: 2rem 0;
   `}
 `;
 
@@ -115,7 +111,6 @@ export const ProducerInfo = styled.div`
 
     strong {
       color: ${theme.colors.gray.platinum};
-      font-size: ${theme.fontSize.normal};
     }
 
     @media screen and (max-width: 576px) {
@@ -168,7 +163,9 @@ export const PersonInfo = styled.div`
 `;
 
 export const PersonImage = styled.img`
+  flex-shrink: 0;
   background-color: white;
   border-radius: 50%;
   width: 4rem;
+  height: 4rem;
 `;

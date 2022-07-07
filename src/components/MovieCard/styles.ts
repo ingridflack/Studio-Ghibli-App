@@ -14,6 +14,13 @@ export const Container = styled.a`
   &:focus {
     transform: scale(1.05);
   }
+
+  @media screen and (max-width: 576px) {
+    &:hover,
+    &:focus {
+      transform: none;
+    }
+  }
 `;
 
 export const Image = styled.img`
@@ -98,7 +105,6 @@ export const ToggleDescriptionButton = styled.button`
   transition: color 300ms ease, background-color 300ms ease;
 
   &:hover {
-    color: ${({ theme }) => theme.colors.gray.white};
     background-color: ${({ theme }) => theme.colors.gray.silver};
   }
 `;

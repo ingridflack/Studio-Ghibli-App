@@ -33,14 +33,14 @@ const Home = ({ movies }: HomeProps) => {
     <>
       <Header />
 
-      <S.Form>
+      <S.InputWrapper>
         <S.Input
           placeholder="Search"
           value={searchValue}
           onChange={handleSearch}
         />
         <AiOutlineSearch />
-      </S.Form>
+      </S.InputWrapper>
 
       <S.MoviesList>
         {filteredMovies.map((movie) => (

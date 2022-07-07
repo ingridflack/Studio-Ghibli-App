@@ -87,8 +87,8 @@ const MovieView = ({ movie, people }: MoviesPageProps) => {
               <S.PersonImage
                 src="/assets/user-placeholder.png"
                 alt={`${name}'s photo`}
-                width={64}
-                height={64}
+                width="4rem"
+                height="4rem"
               />
 
               <S.PersonInfo>

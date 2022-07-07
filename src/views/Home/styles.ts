@@ -8,7 +8,7 @@ export const MoviesList = styled.div`
 
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    gap: 1.5rem;
   }
 
   @media screen and (max-width: 576px) {
@@ -30,7 +30,7 @@ export const Input = styled.input`
   }
 `;
 
-export const Form = styled.form`
+export const InputWrapper = styled.div`
   ${({ theme }) => css`
     margin-bottom: 1.5rem;
     position: relative;
