@@ -34,7 +34,7 @@ Studio Ghibli is a project created to improve my frontend developer skills. To g
 ## Screenshots
 
 - Home 
-![image](https://user-images.githubusercontent.com/8032317/177872839-ca2e1173-01f6-4b15-9880-056832eee7ca.png)
+![image](https://user-images.githubusercontent.com/8032317/177873086-2efa3f90-ebe0-4062-9f7e-ab3921083d3c.png)
 
 - Favorites
 
