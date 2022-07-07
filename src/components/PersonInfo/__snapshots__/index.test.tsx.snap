@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PersonInfo should match snapshot 1`] = `
+<div>
+  <div
+    class="sc-e5673028-0 fnXhTa"
+  >
+    <img
+      alt="Test name's photo"
+      class="sc-e5673028-2 cdofYZ"
+      height="4rem"
+      src="/assets/user-placeholder.png"
+      width="4rem"
+    />
+    <div
+      class="sc-e5673028-1 gsSUVD"
+    >
+      <p>
+        Test name
+      </p>
+      <span>
+        Age: Test age
+      </span>
+      <span>
+        Test gender
+      </span>
+    </div>
+  </div>
+</div>
+`;

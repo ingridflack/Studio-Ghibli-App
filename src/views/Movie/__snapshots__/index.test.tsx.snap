@@ -31,18 +31,18 @@ exports[`Movie should match snapshot 1`] = `
       </nav>
     </div>
     <div
-      class="sc-ba427863-0 gMRxDr"
+      class="sc-c0d3bbf4-0 gIUZqm"
     >
       <h2
-        class="sc-ba427863-1 liGQZO"
+        class="sc-c0d3bbf4-1 jBqMiD"
       >
         Title test
       </h2>
       <div
-        class="sc-ba427863-2 gPSgEN"
+        class="sc-c0d3bbf4-2 kpXWtk"
       >
         <div
-          class="sc-ba427863-3 gafjha"
+          class="sc-c0d3bbf4-3 bCPdBq"
         >
           <svg
             fill="currentColor"
@@ -64,7 +64,7 @@ exports[`Movie should match snapshot 1`] = `
           %
         </div>
         <button
-          class="sc-ba427863-4 gNohqS"
+          class="sc-c0d3bbf4-4 kltpfA"
         >
           <svg
             fill="currentColor"
@@ -85,20 +85,20 @@ exports[`Movie should match snapshot 1`] = `
       </div>
     </div>
     <div
-      class="sc-ba427863-5 ifrOjm"
+      class="sc-c0d3bbf4-5 dEmzL"
     >
       <span
-        class="sc-ba427863-6 kzHmgz"
+        class="sc-c0d3bbf4-6 jiKiFF"
       >
         Description
       </span>
       <p
-        class="sc-ba427863-7 kJCRvi"
+        class="sc-c0d3bbf4-7 hrxycD"
       >
         Description test
       </p>
       <div
-        class="sc-ba427863-8 kA-DOaU"
+        class="sc-c0d3bbf4-8 dsjlIu"
       >
         <span>
           <strong>
@@ -120,25 +120,25 @@ exports[`Movie should match snapshot 1`] = `
         </span>
       </div>
       <span
-        class="sc-ba427863-6 kzHmgz"
+        class="sc-c0d3bbf4-6 jiKiFF"
       >
         Cast
       </span>
       <div
-        class="sc-ba427863-9 hkMQah"
+        class="sc-c0d3bbf4-9 eqnGbk"
       >
         <div
-          class="sc-ba427863-10 eXUYZw"
+          class="sc-e5673028-0 fnXhTa"
         >
           <img
             alt="Person 1's photo"
-            class="sc-ba427863-12 foAoph"
-            height="64"
+            class="sc-e5673028-2 cdofYZ"
+            height="4rem"
             src="/assets/user-placeholder.png"
-            width="64"
+            width="4rem"
           />
           <div
-            class="sc-ba427863-11 kXCgpd"
+            class="sc-e5673028-1 gsSUVD"
           >
             <p>
               Person 1
@@ -152,17 +152,17 @@ exports[`Movie should match snapshot 1`] = `
           </div>
         </div>
         <div
-          class="sc-ba427863-10 eXUYZw"
+          class="sc-e5673028-0 fnXhTa"
         >
           <img
             alt="Person 2's photo"
-            class="sc-ba427863-12 foAoph"
-            height="64"
+            class="sc-e5673028-2 cdofYZ"
+            height="4rem"
             src="/assets/user-placeholder.png"
-            width="64"
+            width="4rem"
           />
           <div
-            class="sc-ba427863-11 kXCgpd"
+            class="sc-e5673028-1 gsSUVD"
           >
             <p>
               Person 2

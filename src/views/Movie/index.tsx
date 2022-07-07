@@ -10,6 +10,7 @@ import * as S from "./styles";
 import { useFavorite } from "../../hooks/useFavorite";
 
 import Header from "../../components/Header";
+import PersonInfo from "../../components/PersonInfo";
 
 interface MoviesPageProps {
   movie: IMovie;
@@ -82,21 +83,8 @@ const MovieView = ({ movie, people }: MoviesPageProps) => {
 
         <S.InfoTitle>Cast</S.InfoTitle>
         <S.Cast>
-          {people.map(({ id, name, age, gender }: IPerson) => (
-            <S.Person key={id}>
-              <S.PersonImage
-                src="/assets/user-placeholder.png"
-                alt={`${name}'s photo`}
-                width="4rem"
-                height="4rem"
-              />
-
-              <S.PersonInfo>
-                <p>{name || "Unknown"}</p>
-                <span>{(age && `Age: ${age}`) || "Unknown"}</span>
-                <span>{gender || "Unknown"}</span>
-              </S.PersonInfo>
-            </S.Person>
+          {people.map((person: IPerson) => (
+            <PersonInfo key={person.id} data={person} />
           ))}
         </S.Cast>
       </S.Content>
