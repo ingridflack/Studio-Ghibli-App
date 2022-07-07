@@ -28,6 +28,11 @@ const NO_BANNER_MOVIE_MOCK = {
   movie_banner: "",
 };
 
+const useFavorite = jest.spyOn(
+  require("../../hooks/useFavorite"),
+  "useFavorite"
+);
+
 describe("MovieCard", () => {
   it("should match snapshot", () => {
     const { container } = render(
@@ -58,6 +63,10 @@ describe("MovieCard", () => {
 
     const favoritedIcon = getByTestId("favorited");
     expect(favoritedIcon).toBeTruthy();
+
+    fireEvent.click(favoriteBtn);
+
+    expect(noFavoriteIcon).toBeTruthy();
   });
 
   it("should not render the read more button", () => {

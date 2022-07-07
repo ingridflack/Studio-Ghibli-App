@@ -58,7 +58,7 @@ const MovieCard = ({ movie }: MovieCardProps) => {
 
   return (
     <Link href={`/movies/${id}`} passHref>
-      <S.Container>
+      <S.Container data-testid="movie-card-container">
         <S.Image
           src={movie_banner || "/assets/placeholder-image.png"}
           alt={`${title} movie banner`}

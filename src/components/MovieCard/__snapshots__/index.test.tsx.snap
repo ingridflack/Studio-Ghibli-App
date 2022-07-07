@@ -4,6 +4,7 @@ exports[`MovieCard should match snapshot 1`] = `
 <div>
   <a
     class="sc-3e83bb86-0 hqYqiU"
+    data-testid="movie-card-container"
     href="/movies/234"
   >
     <img
