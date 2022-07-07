@@ -8,7 +8,8 @@ import { MoviesList } from "../Home/styles";
 import * as S from "./styles";
 
 const Favorites = () => {
-  const { favorites, toggleFavorite } = useFavorite();
+  const { favorites } = useFavorite();
+
   return (
     <>
       <Header />
