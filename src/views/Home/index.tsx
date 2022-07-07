@@ -38,6 +38,7 @@ const Home = ({ movies }: HomeProps) => {
           placeholder="Search"
           value={searchValue}
           onChange={handleSearch}
+          data-cy="input"
         />
         <AiOutlineSearch />
       </S.InputWrapper>
