@@ -14,14 +14,8 @@ interface MovieCardProps {
 const MAX_DESCRIPTION_LENGTH = 125;
 
 const MovieCard = ({ movie }: MovieCardProps) => {
-  const {
-    id,
-    title,
-    original_title,
-    description,
-    director,
-    movie_banner = "/assets/placeholder-image.png",
-  } = movie;
+  const { id, title, original_title, description, director, movie_banner } =
+    movie;
 
   const shouldShowMoreButton = description.length > MAX_DESCRIPTION_LENGTH;
   const [showDescription, setShowDescription] = useState(false);
@@ -54,6 +48,7 @@ const MovieCard = ({ movie }: MovieCardProps) => {
         <S.ToggleDescriptionButton
           type="button"
           onClick={handleShowDescription}
+          data-testid="toggle-description"
         >
           {showDescription ? "- read less" : "+ read more"}
         </S.ToggleDescriptionButton>
@@ -64,14 +59,26 @@ const MovieCard = ({ movie }: MovieCardProps) => {
   return (
     <Link href={`/movies/${id}`} passHref>
       <S.Container>
-        <S.Image src={movie_banner} alt={`${title} movie banner`} />
+        <S.Image
+          src={movie_banner || "/assets/placeholder-image.png"}
+          alt={`${title} movie banner`}
+          data-testid="movie-banner"
+        />
 
         <S.TextContainer>
           <S.Title>
             {title}
 
-            <S.FavoriteBtn type="button" onClick={handleFavorite}>
-              {isFavorite ? <AiFillHeart /> : <AiOutlineHeart />}
+            <S.FavoriteBtn
+              type="button"
+              onClick={handleFavorite}
+              data-testid="favorite-btn"
+            >
+              {isFavorite ? (
+                <AiFillHeart data-testid="favorited" />
+              ) : (
+                <AiOutlineHeart data-testid="no-favorited" />
+              )}
             </S.FavoriteBtn>
           </S.Title>
 
