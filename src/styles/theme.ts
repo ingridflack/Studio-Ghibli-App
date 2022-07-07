@@ -14,6 +14,7 @@ const theme = {
     secondary: "#b20710",
   },
   fontSize: {
+    tiny: "0.65rem",
     small: "0.75rem",
     medium: "0.875rem",
     normal: "1rem",

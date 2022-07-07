@@ -4,7 +4,6 @@ export const Container = styled.a`
   width: 100%;
   border-radius: 1rem;
   background-color: ${({ theme }) => theme.colors.gray.white};
-  overflow: hidden;
   transition: transform 200ms ease-in-out;
   align-self: start;
   min-height: 28rem;
@@ -25,6 +24,7 @@ export const Container = styled.a`
 
 export const Image = styled.img`
   max-width: 100%;
+  border-radius: 1rem 1rem 0 0;
 `;
 
 export const TextContainer = styled.div`
@@ -62,6 +62,7 @@ export const FavoriteBtn = styled.button`
     height: 1.75rem;
     color: ${theme.colors.primary};
     transition: color 300ms ease;
+    position: relative;
 
     &:hover {
       color: ${theme.colors.secondary};
@@ -106,5 +107,6 @@ export const ToggleDescriptionButton = styled.button`
 
   &:hover {
     background-color: ${({ theme }) => theme.colors.gray.silver};
+    border-radius: 0 0 1rem 1rem;
   }
 `;

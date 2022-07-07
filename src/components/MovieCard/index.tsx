@@ -5,6 +5,7 @@ import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import { useFavorite } from "../../hooks/useFavorite";
 
 import { IMovie } from "../../types";
+import Tooltip from "../Tooltip";
 
 import * as S from "./styles";
 interface MovieCardProps {
@@ -69,17 +70,19 @@ const MovieCard = ({ movie }: MovieCardProps) => {
           <S.Title>
             {title}
 
-            <S.FavoriteBtn
-              type="button"
-              onClick={handleFavorite}
-              data-testid="favorite-btn"
-            >
-              {isFavorite ? (
-                <AiFillHeart data-testid="favorited" />
-              ) : (
-                <AiOutlineHeart data-testid="no-favorited" />
-              )}
-            </S.FavoriteBtn>
+            <Tooltip text={isFavorite ? "Remove favorite" : "Add favorite"}>
+              <S.FavoriteBtn
+                type="button"
+                onClick={handleFavorite}
+                data-testid="favorite-btn"
+              >
+                {isFavorite ? (
+                  <AiFillHeart data-testid="favorited" />
+                ) : (
+                  <AiOutlineHeart data-testid="no-favorited" />
+                )}
+              </S.FavoriteBtn>
+            </Tooltip>
           </S.Title>
 
           <S.OriginalTitle>{original_title}</S.OriginalTitle>
