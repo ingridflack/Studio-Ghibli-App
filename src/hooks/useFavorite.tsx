@@ -48,7 +48,9 @@ export function FavoriteProvider({
   const addFavorite = (movie: IMovie) => {
     setFavorites((favorites) => (favorites ? [...favorites, movie] : []));
 
-    toast.success("Movie added to favorites.");
+    toast.success("Movie added to favorites.", {
+      position: toast.POSITION.BOTTOM_RIGHT,
+    });
   };
 
   const removeFavorite = (movie: IMovie) => {
@@ -56,7 +58,9 @@ export function FavoriteProvider({
       favorites?.filter((item) => item.id !== movie.id)
     );
 
-    toast.success("Movie removed from favorites.");
+    toast.success("Movie removed from favorites.", {
+      position: toast.POSITION.BOTTOM_RIGHT,
+    });
   };
 
   const toggleFavorite = (movie: IMovie) => {
