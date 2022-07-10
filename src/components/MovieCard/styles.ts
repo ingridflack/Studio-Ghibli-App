@@ -1,4 +1,5 @@
-import styled, { css, keyframes } from "styled-components";
+import styled, { css } from "styled-components";
+import NextImage from "next/image";
 
 export const Container = styled.a`
   width: 100%;
@@ -9,20 +10,15 @@ export const Container = styled.a`
   min-height: 28rem;
   position: relative;
 
-  &:hover,
-  &:focus {
-    transform: scale(1.05);
-  }
-
-  @media screen and (max-width: 576px) {
+  @media screen and (min-width: 576px) {
     &:hover,
     &:focus {
-      transform: none;
+      transform: scale(1.05);
     }
   }
 `;
 
-export const Image = styled.img`
+export const Image = styled(NextImage)`
   max-width: 100%;
   border-radius: 1rem 1rem 0 0;
 `;
@@ -33,11 +29,15 @@ export const TextContainer = styled.div`
   flex-direction: column;
 `;
 
+export const TitleContainer = styled.span`
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+`;
+
 export const Title = styled.span`
   ${({ theme }) => css`
-    align-items: flex-start;
-    display: flex;
-    justify-content: space-between;
+    color: ${theme.colors.gray.dark};
     font-size: ${theme.fontSize.large};
     font-weight: 600;
     line-height: 1.75rem;
@@ -46,7 +46,7 @@ export const Title = styled.span`
 
 export const OriginalTitle = styled.span`
   ${({ theme }) => css`
-    color: ${theme.colors.gray.silver};
+    color: rgba(20, 20, 20, 0.5);
     font-size: ${theme.fontSize.small};
     font-weight: 600;
   `}
@@ -104,9 +104,9 @@ export const ToggleDescriptionButton = styled.button`
   left: 0;
   width: 100%;
   transition: color 300ms ease, background-color 300ms ease;
+  border-radius: 0 0 1rem 1rem;
 
   &:hover {
-    background-color: ${({ theme }) => theme.colors.gray.silver};
-    border-radius: 0 0 1rem 1rem;
+    background-color: rgba(0, 0, 0, 0.2);
   }
 `;

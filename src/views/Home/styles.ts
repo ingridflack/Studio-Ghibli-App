@@ -32,7 +32,6 @@ export const Input = styled.input`
 
 export const InputWrapper = styled.div`
   ${({ theme }) => css`
-    margin-bottom: 1.5rem;
     position: relative;
 
     svg {

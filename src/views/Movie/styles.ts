@@ -1,16 +1,53 @@
 import styled, { css } from "styled-components";
 
-export const Header = styled.div`
-  ${({ theme }) => css`
+interface IHeader {
+  backgroundImage: string;
+}
+export const Header = styled.div<IHeader>`
+  ${({ theme, backgroundImage }) => css`
     color: ${theme.colors.gray.white};
+    background: radial-gradient(
+        circle,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 1) 90%,
+        rgba(0, 0, 0, 1) 100%
+      ),
+      linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 0) 70%,
+        rgba(0, 0, 0, 0) 100%
+      ),
+      url(${backgroundImage}) center no-repeat;
+    background-size: cover;
+
+    @media screen and (max-width: 576px) {
+      background: radial-gradient(
+          rgba(0, 0, 0, 0) 0%,
+          rgba(0, 0, 0, 1) 70%,
+          rgba(0, 0, 0, 1) 100%
+        ),
+        linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 1) 0%,
+          rgba(0, 0, 0, 0) 60%,
+          rgba(0, 0, 0, 0) 100%
+        ),
+        url(${backgroundImage}) center no-repeat;
+    }
   `}
+`;
+
+export const HeaderContent = styled.div`
+  margin-top: 10rem;
 `;
 
 export const Title = styled.h2`
   ${({ theme }) => css`
     color: ${theme.colors.gray.white};
     font-weight: 400;
-    font-size: 1.4rem;
+    font-size: 2rem;
+    line-height: 1.5;
   `}
 `;
 
@@ -78,7 +115,7 @@ export const InfoTitle = styled.span`
     color: ${theme.colors.gray.silver};
     display: flex;
     font-size: ${theme.fontSize.normal};
-    margin: 2rem 0;
+    margin: 2rem 0 1rem;
   `}
 `;
 

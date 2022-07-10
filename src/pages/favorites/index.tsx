@@ -7,7 +7,7 @@ const FavoritesPage: NextPage = () => {
   return (
     <MainContainer>
       <Head>
-        <title>Favorites</title>
+        <title>Studio Ghibli - Favorite movies</title>
       </Head>
 
       <Favorites />

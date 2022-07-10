@@ -30,19 +30,3 @@ Studio Ghibli is a project created to improve my frontend developer skills. To g
 ## E2E tests
 
 - Run `yarn cypress:open`
-
-## Screenshots
-
-- Home 
-![image](https://user-images.githubusercontent.com/8032317/177873086-2efa3f90-ebe0-4062-9f7e-ab3921083d3c.png)
-
-- Favorites
-
-![image](https://user-images.githubusercontent.com/8032317/177872884-8954bb65-cd34-4f23-ba94-c7c0a4080a2a.png)
-
-- Movie details
-
-![image](https://user-images.githubusercontent.com/8032317/177872980-e9a2e032-afde-4dc6-afbc-14229cf09d14.png)
-
-
-

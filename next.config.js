@@ -8,6 +8,9 @@ const nextConfig = {
     locales: ["en"],
     defaultLocale: "en",
   },
+  images: {
+    domains: ["image.tmdb.org", "www.themoviedb.org"],
+  },
 };
 
 module.exports = nextConfig;

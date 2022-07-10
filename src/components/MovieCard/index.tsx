@@ -64,13 +64,18 @@ const MovieCard = ({ movie }: MovieCardProps) => {
           src={movie_banner || "/assets/placeholder-image.png"}
           alt={`${title} movie banner`}
           data-testid="movie-banner"
+          layout="responsive"
+          width={300}
+          height={160}
         />
 
         <S.TextContainer>
-          <S.Title>
-            {title}
+          <S.TitleContainer>
+            <S.Title data-testid="card-title">{title}</S.Title>
 
-            <Tooltip text={isFavorite ? "Remove favorite" : "Add favorite"}>
+            <Tooltip
+              text={isFavorite ? "Remove from favorites" : "Add to favorites"}
+            >
               <S.FavoriteBtn
                 type="button"
                 onClick={handleFavorite}
@@ -83,7 +88,7 @@ const MovieCard = ({ movie }: MovieCardProps) => {
                 )}
               </S.FavoriteBtn>
             </Tooltip>
-          </S.Title>
+          </S.TitleContainer>
 
           <S.OriginalTitle>{original_title}</S.OriginalTitle>
 

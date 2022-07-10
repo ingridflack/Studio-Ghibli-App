@@ -28,67 +28,76 @@ const MovieView = ({ movie, people }: MoviesPageProps) => {
     toggleFavorite(movie);
   };
 
-  if (!movie) return null;
-
-  const { title, description, director, producer, release_date, rt_score } =
-    movie;
+  const {
+    title,
+    description,
+    director,
+    producer,
+    release_date,
+    rt_score,
+    movie_banner,
+  } = movie;
 
   return (
-    <MainContainer>
-      <Header />
+    <>
+      <MainContainer>
+        <S.Header backgroundImage={movie_banner}>
+          <Header />
 
-      <S.Header>
-        <S.Title>{title}</S.Title>
+          <S.HeaderContent>
+            <S.Title data-testid="movie-title">{title}</S.Title>
 
-        <S.ButtonsContainer>
-          {!!rt_score && (
-            <S.RTBox>
-              <SiRottentomatoes /> {rt_score}%
-            </S.RTBox>
-          )}
+            <S.ButtonsContainer>
+              {!!rt_score && (
+                <S.RTBox>
+                  <SiRottentomatoes /> {rt_score}%
+                </S.RTBox>
+              )}
 
-          <S.FavoriteButton active={isFavorite} onClick={handleFavorite}>
-            {isFavorite ? (
-              <>
-                <BsHeartFill /> Favorite
-              </>
-            ) : (
-              <>
-                <BsHeart /> Add to favorites
-              </>
-            )}
-          </S.FavoriteButton>
-        </S.ButtonsContainer>
-      </S.Header>
+              <S.FavoriteButton active={isFavorite} onClick={handleFavorite}>
+                {isFavorite ? (
+                  <>
+                    <BsHeartFill /> Favorited
+                  </>
+                ) : (
+                  <>
+                    <BsHeart /> Add to favorites
+                  </>
+                )}
+              </S.FavoriteButton>
+            </S.ButtonsContainer>
+          </S.HeaderContent>
+        </S.Header>
 
-      <S.Content>
-        <S.InfoTitle>Description</S.InfoTitle>
+        <S.Content>
+          <S.InfoTitle>Description</S.InfoTitle>
 
-        <S.Description>{description}</S.Description>
+          <S.Description>{description}</S.Description>
 
-        <S.ProducerInfo>
-          <span>
-            <strong>Director: </strong>
-            {director || "Unknown"}
-          </span>
-          <span>
-            <strong>Producer: </strong>
-            {producer || "Unknown"}
-          </span>
-          <span>
-            <strong>Release date: </strong>
-            {release_date || "Unknown"}
-          </span>
-        </S.ProducerInfo>
+          <S.ProducerInfo>
+            <span>
+              <strong>Director: </strong>
+              {director || "Unknown"}
+            </span>
+            <span>
+              <strong>Producer: </strong>
+              {producer || "Unknown"}
+            </span>
+            <span>
+              <strong>Release date: </strong>
+              {release_date || "Unknown"}
+            </span>
+          </S.ProducerInfo>
 
-        <S.InfoTitle>Cast</S.InfoTitle>
-        <S.Cast>
-          {people.map((person: IPerson) => (
-            <PersonInfo key={person.id} data={person} />
-          ))}
-        </S.Cast>
-      </S.Content>
-    </MainContainer>
+          <S.InfoTitle>Cast</S.InfoTitle>
+          <S.Cast>
+            {people.map((person: IPerson) => (
+              <PersonInfo key={person.id} data={person} />
+            ))}
+          </S.Cast>
+        </S.Content>
+      </MainContainer>
+    </>
   );
 };
 
