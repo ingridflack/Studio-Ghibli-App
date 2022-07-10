@@ -3,24 +3,24 @@
 exports[`Header should match snapshot 1`] = `
 <div>
   <div
-    class="sc-c8ddd29-0 iFqajX"
+    class="sc-acc38eb5-0 jBEmtF"
   >
     <img
       alt="Studio Ghibli logo"
-      class="sc-c8ddd29-1 bMwEkK"
+      class="sc-acc38eb5-1 hxYLtv"
       height="72"
       src="/assets/studio-ghibli-logo.webp"
       width="128"
     />
     <nav>
       <a
-        class="sc-c8ddd29-2 fflUWz"
+        class="sc-acc38eb5-2 bYjima"
         href="/"
       >
         Home
       </a>
       <a
-        class="sc-c8ddd29-2 etVLLE"
+        class="sc-acc38eb5-2 iwGSMA"
         href="/favorites"
       >
         Favorites

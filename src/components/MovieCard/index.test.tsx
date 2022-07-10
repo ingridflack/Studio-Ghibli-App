@@ -97,20 +97,4 @@ describe("MovieCard", () => {
     fireEvent.click(toggleDescriptionBtn);
     expect(toggleDescriptionBtn.innerHTML).toEqual("- read less");
   });
-
-  it("should render the placeholder image", () => {
-    const { getByTestId } = render(
-      <ThemeProvider theme={theme}>
-        <FavoriteProvider>
-          <MovieCard movie={NO_BANNER_MOVIE_MOCK} />
-        </FavoriteProvider>
-      </ThemeProvider>
-    );
-
-    const movieBanner = getByTestId("movie-banner");
-
-    expect(movieBanner.getAttribute("src")).toEqual(
-      "/assets/placeholder-image.png"
-    );
-  });
 });

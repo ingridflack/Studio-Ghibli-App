@@ -3,24 +3,24 @@
 exports[`Favorites should match snapshot 1`] = `
 <div>
   <div
-    class="sc-c8ddd29-0 iFqajX"
+    class="sc-acc38eb5-0 jBEmtF"
   >
     <img
       alt="Studio Ghibli logo"
-      class="sc-c8ddd29-1 bMwEkK"
+      class="sc-acc38eb5-1 hxYLtv"
       height="72"
       src="/assets/studio-ghibli-logo.webp"
       width="128"
     />
     <nav>
       <a
-        class="sc-c8ddd29-2 fflUWz"
+        class="sc-acc38eb5-2 bYjima"
         href="/"
       >
         Home
       </a>
       <a
-        class="sc-c8ddd29-2 etVLLE"
+        class="sc-acc38eb5-2 iwGSMA"
         href="/favorites"
       >
         Favorites
@@ -33,36 +33,52 @@ exports[`Favorites should match snapshot 1`] = `
     Favorites
   </h2>
   <div
-    class="sc-29dbae42-0 jReOdp"
+    class="sc-ac3e41b8-0 kpVdd"
   >
     <a
-      class="sc-8c092beb-0 cDXLon"
+      class="sc-74a0e932-0 jKUBJa"
       data-testid="movie-card-container"
       href="/movies/234"
     >
-      <img
-        alt="Title test movie banner"
-        class="sc-8c092beb-1 iJlXHw"
-        data-testid="movie-banner"
-        src="/assets/studio-ghibli-logo.webp"
-      />
-      <div
-        class="sc-8c092beb-2 gVYvVF"
+      <span
+        style="box-sizing: border-box; display: block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;"
       >
         <span
-          class="sc-8c092beb-3 iXvlkX"
+          style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 53.333333333333336% 0px 0px 0px;"
+        />
+        <img
+          alt="Title test movie banner"
+          class="sc-74a0e932-1 fqsWUy"
+          data-nimg="responsive"
+          data-testid="movie-banner"
+          decoding="async"
+          src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+          style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+        />
+        <noscript />
+      </span>
+      <div
+        class="sc-74a0e932-2 cpILKX"
+      >
+        <span
+          class="sc-74a0e932-3 eWneaZ"
         >
-          Title test
+          <span
+            class="sc-74a0e932-4 dbGZIV"
+            data-testid="card-title"
+          >
+            Title test
+          </span>
           <div
             class="sc-ade4b8be-1 kbXxyf"
           >
             <div
               class="sc-ade4b8be-0 jUqyaW"
             >
-              Remove favorite
+              Remove from favorites
             </div>
             <button
-              class="sc-8c092beb-5 cREqlB"
+              class="sc-74a0e932-6 dplNRY"
               data-testid="favorite-btn"
               type="button"
             >
@@ -84,12 +100,12 @@ exports[`Favorites should match snapshot 1`] = `
           </div>
         </span>
         <span
-          class="sc-8c092beb-4 gAARqp"
+          class="sc-74a0e932-5 jZSNfa"
         >
           Original title test
         </span>
         <span
-          class="sc-8c092beb-6 dawAhA"
+          class="sc-74a0e932-7 jWDmqT"
         >
           <strong>
             Director:
@@ -98,40 +114,56 @@ exports[`Favorites should match snapshot 1`] = `
           Director test
         </span>
         <p
-          class="sc-8c092beb-7 rPwoM"
+          class="sc-74a0e932-8 cogrSB"
         >
           Description test
         </p>
       </div>
     </a>
     <a
-      class="sc-8c092beb-0 cDXLon"
+      class="sc-74a0e932-0 jKUBJa"
       data-testid="movie-card-container"
       href="/movies/2345"
     >
-      <img
-        alt="Title test 2 movie banner"
-        class="sc-8c092beb-1 iJlXHw"
-        data-testid="movie-banner"
-        src="/assets/studio-ghibli-logo.webp"
-      />
-      <div
-        class="sc-8c092beb-2 gVYvVF"
+      <span
+        style="box-sizing: border-box; display: block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;"
       >
         <span
-          class="sc-8c092beb-3 iXvlkX"
+          style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 53.333333333333336% 0px 0px 0px;"
+        />
+        <img
+          alt="Title test 2 movie banner"
+          class="sc-74a0e932-1 fqsWUy"
+          data-nimg="responsive"
+          data-testid="movie-banner"
+          decoding="async"
+          src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+          style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+        />
+        <noscript />
+      </span>
+      <div
+        class="sc-74a0e932-2 cpILKX"
+      >
+        <span
+          class="sc-74a0e932-3 eWneaZ"
         >
-          Title test 2
+          <span
+            class="sc-74a0e932-4 dbGZIV"
+            data-testid="card-title"
+          >
+            Title test 2
+          </span>
           <div
             class="sc-ade4b8be-1 kbXxyf"
           >
             <div
               class="sc-ade4b8be-0 jUqyaW"
             >
-              Remove favorite
+              Remove from favorites
             </div>
             <button
-              class="sc-8c092beb-5 cREqlB"
+              class="sc-74a0e932-6 dplNRY"
               data-testid="favorite-btn"
               type="button"
             >
@@ -153,12 +185,12 @@ exports[`Favorites should match snapshot 1`] = `
           </div>
         </span>
         <span
-          class="sc-8c092beb-4 gAARqp"
+          class="sc-74a0e932-5 jZSNfa"
         >
           Original title test 2
         </span>
         <span
-          class="sc-8c092beb-6 dawAhA"
+          class="sc-74a0e932-7 jWDmqT"
         >
           <strong>
             Director:
@@ -167,7 +199,7 @@ exports[`Favorites should match snapshot 1`] = `
           Director test 2
         </span>
         <p
-          class="sc-8c092beb-7 rPwoM"
+          class="sc-74a0e932-8 cogrSB"
         >
           Description test 2
         </p>
